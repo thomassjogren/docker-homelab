@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/home-assistant:latest
+    ports:
+      - "8123:8123/tcp"
+    environment:
+      TZ: 'Europe/Copenhagen'
+    volumes:
+      - '$HOME/docker-data/home-assistant:/config'
+    network_mode: host
+    restart: unless-stopped
