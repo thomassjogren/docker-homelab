@@ -9,8 +9,8 @@ services:
       - "53:53/udp"
       - "80:80/tcp"
     environment:
-      TZ: 'Europe/Copenhagen'
+      TZ: "Europe/Copenhagen"
     volumes:
-      - '$HOME/docker-data/pihole/etc-pihole:/etc/pihole'
-      - '$HOME/docker-data/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+      - "$HOME/docker-data/pihole/etc-pihole:/etc/pihole"
+      - "$HOME/docker-data/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
     restart: unless-stopped
